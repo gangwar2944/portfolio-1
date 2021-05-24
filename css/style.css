@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #ff9933;
+}
+body {
+  background: var(--background);
+}
+a{
+ text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+input,
+input:focus,
+input:active{
+outline: none;
+box-shadow: none;
+}
