@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 :root {
-  --background: #ff9933;
-}
+  --background: #fff;
+  }
 body {
   background: var(--background);
 }
