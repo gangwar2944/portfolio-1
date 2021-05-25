@@ -93,8 +93,8 @@ z-index: 1;
 }
 
 .text-nue{
-  text-shadow:  -4px -4px 6px rgba(255,255,255,0.8),
-                 4px 4px 6px rgba(0,0,0,.08);
+  text-shadow: inset -4px -4px 6px rgba(255,255,255,0.8),
+                inset 4px 4px 6px rgba(0,0,0,.08);
 }
 .intro-btn{
   margin-top: 30px;
