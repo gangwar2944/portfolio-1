@@ -80,8 +80,8 @@ color: var(--background);
 
 
 .text-nue{
-  text-shadow:  -4px -4px 6px rgba(255,255,255,0.8),
-                 4px 4px 6px rgba(0,0,0,.08);
+  text-shadow:  -3px -3px 3px rgba(255,255,255,0.8),
+                 3px 3px 3px rgba(0,0,0,.08);
 }
 .intro-btn{
   margin-top: 30px;
@@ -94,16 +94,16 @@ color: var(--background);
 color: var(--white);
 font-size: 1.2rem;
 border: 1px solid transparent;
-box-shadow: -6px -6px 9px rgba(255,255,255,0.8),
-             6px 6px 9px rgba(0,0,0,.08);
+box-shadow: -3px -3px 3px rgba(255,255,255,0.8),
+             3px 3px 3px rgba(0,0,0,.08);
 padding: 5px 20px;
 border-radius: 20px;
 cursor: pointer;
 font-weight: 700;
 }
 .mybtn:hover{
-  box-shadow:inset -6px -6px 9px rgba(255,255,255,0.8),
-             inset 6px 6px 9px rgba(0,0,0,.08);
+  box-shadow:inset -3px -3px 3px rgba(255,255,255,0.8),
+             inset 3px 3px 3px rgba(0,0,0,.08);
  color:var(--white);
 }
 
