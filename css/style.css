@@ -73,14 +73,14 @@ cursor: pointer;
   position: relative;
   color: var(--white);
   font-weight: 700;
-  font-size: 6em;
+  font-size: 4.5em;
   text-transform: uppercase;
   line-height: 0.9em;
   letter-spacing: 2px;
   text-align: center;
   transform: rotate(-30deg) skew(25deg) translateX(20px);
   transition: transform 800ms ease-in-out;
-  transition-delay: 1s;
+  transition-delay: 2s;
 
 
 }
@@ -98,7 +98,7 @@ cursor: pointer;
     overflow: hidden;
     transform: translateX(-600px);
     transition: transform 1000ms ease-in-out;
-    transition-delay: 2s;
+    transition-delay: 4s;
 
 
 }
