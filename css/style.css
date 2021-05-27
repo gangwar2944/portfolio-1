@@ -83,7 +83,7 @@ cursor: pointer;
   text-align: center;
   top: -10%;
   transform: rotate(-30deg) skew(25deg) translateX(20px);
-  transition: transform 800ms ease-in-out;
+  transition: all 1000ms ease-in-out;
   transition-delay: 2s;
 
 
