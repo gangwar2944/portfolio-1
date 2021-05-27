@@ -128,9 +128,9 @@ padding: 7px; */
   font-size: 1.1em;
   letter-spacing: 2px;
   text-align: left;
-  transform: translateY(80%);
+  transform: translateY(60%);
   opacity: 0;
-  transition: all 2s ease-in-out;
+  transition: all 4s ease-in-out;
   transition-delay: 5s;
 }
 .animateAbout{
