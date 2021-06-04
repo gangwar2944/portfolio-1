@@ -37,6 +37,9 @@
       box-shadow: none;
       padding: 0;
     }
+    .side-nav{
+      width: 20%;
+    }
 
   .icon {
     font-size: 4.4rem;
