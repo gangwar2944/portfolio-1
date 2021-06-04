@@ -14,7 +14,7 @@
     width: 100%;
     transform: translate(10%,20%);
     margin-top: 130px;
-    font-size: 4em;
+    font-size: 5em;
 
     }
     .aboutme{
@@ -26,14 +26,14 @@
       transition: all 2s ease-in-out;
       transition-delay: 6s;
        padding-left: 80px;
-      font-size: 1.5em;
+      font-size: 3em;
   }
   .animateAbout{
     transform: translateY(10%);
     opacity: 1;
   }
   .tags{
-      font-size: 1em;
+      font-size: .7em;
       box-shadow: none;
       padding: 0;
     }
