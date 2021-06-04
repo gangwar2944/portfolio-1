@@ -1,0 +1,71 @@
+/*for tablets/ipad devices*/
+@media screen and (min-width:768px) {
+    .main-area .text{
+      font-size: 16em;
+      top: 0;
+  }
+    .desc-box{
+      transform: translateX(-1600px);
+      padding-left:80px;
+
+      width: 100%;
+    }
+    .desc{
+    width: 100%;
+    transform: translate(10%,20%);
+    margin-top: 130px;
+    font-size: 2em;
+
+    }
+    .aboutme{
+      width: 80%;
+      padding: 10px;
+      font-size: 1em;
+      transform: translateY(60%);
+      opacity: 0;
+      transition: all 2s ease-in-out;
+      transition-delay: 6s;
+       padding-left: 80px;
+      font-size: 1.5em;
+  }
+  .animateAbout{
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  .tags{
+      font-size: 1em;
+      box-shadow: none;
+      padding: 0;
+    }
+
+  .icon {
+    font-size: 2.4rem;
+    color: var(--grey);
+    text-decoration: none;
+    width: 75px ;
+    height: 75px;
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    background: var(--lightblack);
+    align-items: center;
+    justify-content: center;
+    box-shadow:  -2px -2px 2px rgba(255,255,255,0.03),
+                 3px 3px 4px rgba(0,0,0,0.4);
+  }
+  .icon:hover{
+  color: var(--grey);
+  }
+.nav-link{
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+    color: var(--grey);
+    }
+.active{
+    box-shadow: inset -2px -2px 2px rgba(255,255,255,0.07),
+                inset 3px 3px 4px rgba(0,0,0,0.5);
+    color: var(--white);
+  }
+  }
