@@ -4,6 +4,7 @@ let descBox = document.querySelector('#desc-box');
 let description  = document.querySelector('#desc');
 let smallNavLinks =document.querySelectorAll('#small-nav a');
 let largeNavLinks =document.querySelectorAll('#large-nav a');
+let allNavLinks =document.querySelectorAll('.side-nav a');
 let  aboutme = document.querySelector('.aboutme');
 let  hi = document.querySelector('#hi');
 let  iam = document.querySelector('#iam');
@@ -62,3 +63,6 @@ if( i === tags_data.length){
 changeText();
 setInterval(changeText,1000);
 // changing text end here
+
+//activating clicked navbar
+
