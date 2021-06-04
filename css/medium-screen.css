@@ -42,11 +42,11 @@
     font-size: 2.4rem;
     color: var(--grey);
     text-decoration: none;
-    width: 75px ;
-    height: 75px;
+    width: 95px ;
+    height: 95px;
     margin-top: 15px;
-    border-radius: 25px;
-    padding: 15px;
+    border-radius: 35px;
+    padding: 25px;
     display: flex;
     background: var(--lightblack);
     align-items: center;
