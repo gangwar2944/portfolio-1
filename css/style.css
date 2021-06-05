@@ -12,10 +12,16 @@ box-sizing: border-box;
 --black:#000;
 --lightblack:#18191f;
 --grey:rgb(177, 170, 170);
+--navy:#2e2a39;
+--teal:#058789;
+--orange:#d54b1a;
+--yellow:#e3a72f;
+--cream:#f0ecc9;
+--dgreen:#2f4b26;
+--lgreen:#3e885b;
+--pgreen:#85bda6;
 }
 body{
-
-background: var(--black);
 font-family: 'Poppins', sans-serif;
 }
 a{
@@ -34,6 +40,7 @@ color: var(--grey);
  display: flex;
  justify-content: space-between;
  height: 100vh;
+ z-index: 99999;
 }
 .side-nav{
    display: flex;
@@ -175,6 +182,8 @@ padding: 7px; */
 }
 
 
+
+
 /*for small devices*/
 @media screen and (max-width:992px) {
 
@@ -183,4 +192,163 @@ padding: 7px; */
   }
 
 }
+
+
+
+
+
+
+
+
+/* background aniation css */
+/* .bg-animate{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 9999;
+  text-align: center;
+  overflow: hidden;
+
+}
+.bg-box{
+width: 20px;
+height: 20px;
+display: inline-block;
+z-index: -1;
+}
+.dot{
+width: 10px;
+height: 10px;
+
+border-radius: 50%;
+}
+.colour-1,
+.colour-2,
+.colour-3,
+.colour-4,
+.colour-5 {
+position: relative;
+ left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-iteration-count: infinite;
+}
+/* .bg-box:hover .colour-1,
+.bg-box:hover .colour-2,
+.bg-box:hover .colour-3,
+.bg-box:hover .colour-4,
+.bg-box:hover .colour-5{
+ animation-play-state: running;
+} */
+/* .colour-1{
+  animation-name: grow-1;
+}
+.colour-2{
+  animation-name: grow-2;
+}
+.colour-3{
+  animation-name: grow-3;
+}
+.colour-4{
+  animation-name: grow-4;
+}
+.colour-5{
+  animation-name: grow-5;
+}
+
+@keyframes grow-1{
+  0%{
+ background-color: var(--cream);
+ z-index: 0;
+ width: 10px;
+ height: 10px;
+  }
+  20%{
+ z-index: 1;
+
+  }
+  100%{
+ background-color: var(--dgreen);
+ width: 50px;
+ height: 50px;
+ z-index: 1;
+  }
+ }
+ @keyframes grow-2{
+  0%{
+ background-color: var(--cream);
+ z-index: 0;
+ width: 10px;
+ height: 10px;
+  }
+  20%{
+ z-index: 1;
+
+  }
+  100%{
+ background-color: var(--lgreen);
+ width: 100px;
+ height: 100px;
+ z-index: 1;
+  }
+ }
+ @keyframes grow-3{
+  0%{
+ background-color: var(--cream);
+ z-index: 0;
+ width: 10px;
+ height: 10px;
+  }
+  20%{
+ z-index: 1;
+
+  }
+  100%{
+ background-color: var(--pgreen);
+ width: 150px;
+ height: 150px;
+ z-index: 1;
+  }
+ }
+ @keyframes grow-4{
+  0%{
+ background-color: var(--cream);
+ z-index: 0;
+ width: 10px;
+ height: 10px;
+  }
+  20%{
+ z-index: 1;
+
+  }
+  100%{
+ background-color: var(--orange);
+ width: 175px;
+ height: 175px;
+ z-index: 1;
+  }
+ }
+ @keyframes grow-5{
+  0%{
+ background-color: var(--cream);
+ z-index: 0;
+ width: 10px;
+ height: 10px;
+  }
+  20%{
+ z-index: 1;
+
+  }
+  100%{
+ background-color: var(--yellow);
+ width: 150px;
+ height: 150px;
+ z-index: 1;
+  }
+ }  */
+
 
