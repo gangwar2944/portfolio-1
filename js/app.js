@@ -5,6 +5,7 @@ const darkBtn = document.querySelector('#dark');
 const lightBtn = document.querySelector('#light');
 const menuBox = document.querySelector('#menu-box');
 const body = document.querySelector('body');
+const allShadow = document.querySelectorAll('.shadow');
 let colorCode = getComputedStyle(document.body);
 const allMenu = document.querySelectorAll('.menu-item');
 const allText = document.querySelectorAll('.text');
@@ -43,10 +44,10 @@ menuBtn.addEventListener('click',()=>{
 function darkMode(){
     document.documentElement.style.setProperty('--light', '#121212');
     document.documentElement.style.setProperty('--dark', '#f2f2f2');
-    menuBtn.classList.add('box-shadow-dark');
-    themeBox.classList.add('box-shadow-dark');
-    menuBtn.classList.remove('box-shadow-light');
-    themeBox.classList.remove('box-shadow-light');
+    allShadow.forEach(item =>{
+        item.classList.add("box-shadow-dark");
+        item.classList.remove("box-shadow-light");
+    });
     allMenu.forEach(menu =>{
         menu.classList.remove("box-shadow-light");
         menu.classList.add("box-shadow-dark");
@@ -59,10 +60,10 @@ function darkMode(){
 function lightMode(){
     document.documentElement.style.setProperty('--light', '#f2f2f2');
     document.documentElement.style.setProperty('--dark', '#121212');
-    menuBtn.classList.remove('box-shadow-dark');
-    themeBox.classList.remove('box-shadow-dark');
-    menuBtn.classList.add('box-shadow-light');
-    themeBox.classList.add('box-shadow-light');
+    allShadow.forEach(item =>{
+        item.classList.remove("box-shadow-dark");
+        item.classList.add("box-shadow-light");
+    });
     allMenu.forEach(menu =>{
         menu.classList.add("box-shadow-light");
         menu.classList.remove("box-shadow-dark");
