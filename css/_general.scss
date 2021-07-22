@@ -12,6 +12,9 @@
     
     
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color:var(--light);
     color:var(--dark);

@@ -49,6 +49,13 @@ menuBtn.addEventListener('click',()=>{
      menuOpen = false;
     }
 });
+allMenu.forEach(menu =>{
+    menu.addEventListener('click',()=>{
+        menuBtn.classList.remove('open');
+        menuBox.classList.remove('active');
+        menuOpen = false;
+    });
+});
 // theme on off
 function darkMode(){
     document.documentElement.style.setProperty('--light', '#121212');
