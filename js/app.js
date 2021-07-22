@@ -4,6 +4,7 @@ const themeBox = document.querySelector('#theme-box');
 const darkBtn = document.querySelector('#dark');
 const lightBtn = document.querySelector('#light');
 const menuBox = document.querySelector('#menu-box');
+const loader = document.querySelector('#loading');
 const body = document.querySelector('body');
 const allShadow = document.querySelectorAll('.shadow');
 const allShadow2 = document.querySelectorAll('.shadow2');
@@ -12,8 +13,9 @@ const allMenu = document.querySelectorAll('.menu-item');
 const allText = document.querySelectorAll('.text');
 let menuOpen = false;
 // on load method
+
 addEventListener('load',()=>{
-    
+    loader.style.display = "none";
     if(!document.cookie){ 
         // dark mode code
         lightBtn.classList.add("d-none");
