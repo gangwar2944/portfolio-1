@@ -1,11 +1,12 @@
-@import './variables';
 @import './general';
- 
+ @import './variables';
+
 // navbar
 .nav{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
 
     .menu-btn-box{
@@ -17,18 +18,18 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        background: $light-color;
-        color: $grey-color;
-        box-shadow: 2px 2px 2px rgba(0,0,0,.14),
-                   -2px -2px 2px rgba(255,255,255,1);
+        background: var(--light);
+        color: var(--dark);
+        // box-shadow: 2px 2px 2px rgba(0,0,0,.2),
+        //            -2px -2px 2px rgba(255,255,255,1);
         border-radius: 7px;
-        top: 3%;
+        top: 20px;
         right: 6%;
         z-index: 1000;
         .menu-btn{
            width: $bar-btn-width;
            height: $bar-btn-height;
-           background: $grey-color;
+           background: var(--text-color);
            border-radius: 5px;
            box-shadow: 0px 2px 5px rgba(255,101,47,.2);
            transition: all.5s ease-in-out;
@@ -39,7 +40,7 @@
                position: absolute;
                width: $bar-btn-width;
               height: $bar-btn-height;
-              background: $grey-color;
+              background: var(--text-color);
               border-radius: 5px;
               box-shadow: 0px 2px 5px rgba(255,101,47,.2);
               transition: all.5s ease-in-out;
@@ -51,10 +52,15 @@
                transform: translateY(12px);
            }
         }
+        
        
-        &.open{
-            box-shadow: inset 2px 2px 2px rgba(0,0,0,.14),
+        &.open.box-shadow-light{
+            box-shadow: inset 2px 2px 2px rgba(0,0,0,.2),
                         inset -2px -2px 2px rgba(255,255,255,1);
+        }
+        &.open.box-shadow-dark{
+            box-shadow: inset 2px 2px 2px rgba(0,0,0,1),
+                        inset -2px -2px 2px rgba(255,255,255,.12);
         }
         &.open .menu-btn{
             transform: translateX(50px);
@@ -68,7 +74,39 @@
         &.open .menu-btn::after{
             transform: rotate(-45deg) translate(-35px,-35px);
         }
+        &:hover  .menu-btn,
+        &:hover .menu-btn::after,
+        &:hover .menu-btn::before{
+            background: var(--dark);
+        }
         
+    }
+    .theme-box{
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: var(--light);
+        color: var(--dark);
+        // box-shadow: 2px 2px 2px rgba(0,0,0,.2),
+        //            -2px -2px 2px rgba(255,255,255,1);
+        border-radius: 7px;
+        top: 87px;
+        right: 6%;
+        z-index: 1000;
+        &:hover .theme-btn{
+             color: var(--dark);
+        }
+        .theme-btn{
+            font-size: 1.7rem;
+            color: var(--text-color);;
+            transition: .5s;
+            
+        }
     }
    
 }
@@ -79,12 +117,16 @@
     height: 100vh;
     z-index: 500;
     background: rgba(0,0,0,.01); 
+    visibility: hidden;
+    background: var(--light);
    
     .menu{
         width: 100%;
         height: 88vh;
         transform: translateY(12vh);
-       
+        // visibility: hidden;
+        // transform: translateX(120%);
+        background: var(--light);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -94,8 +136,8 @@
             width: 90%;
             min-height: 2vh;
             border-radius: 7px;
-            box-shadow: 2px 2px 2px rgba(0,0,0,.2),
-                        -2px -2px 2px rgba(255,255,255,1);
+            // box-shadow: 2px 2px 2px rgba(0,0,0,.2),
+            //            -2px -2px 2px rgba(255,255,255,1);
            text-align: center;
             padding: 10px;
             margin-top: 10px;
@@ -104,7 +146,13 @@
                 display: block;
                 width: 100%;
                 height: 100%;
-                font-weight: 500;
+                font-weight: 100;
+                font-size: 1.2rem;
+                letter-spacing: 5px;
+                color: var(--text-color);
+                &:hover{
+                    color: var(--dark);
+                }
                
             }
            
@@ -137,12 +185,70 @@
    
     &.active{
         visibility: visible;
+        transform: translateX(0%);
+    
     } 
+    // &.active .menu{
+    //     visibility: visible;
+    //     transform: translateX(0%);
+        
+    // }
     &.active .menu .menu-item{
         transform: translateX(0%);
     }
 }
 
-
-
-
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        padding:50px 10px;
+        
+        h1{
+            font-size: 4rem;
+        }
+    }
+    .intro{
+        p{
+            font-size: 1.5rem;
+            
+            margin-top: -30px;
+        }
+    }
+    .landing-btn-box{
+        
+        display: flex;
+        justify-content: space-between;
+        a{
+            margin: 30px 19px;
+            display: block;
+        }
+    }
+}
+// for large devices
+@media screen and (min-width:992px) {
+    .menu-box .menu{
+        align-items: flex-end;
+        padding-right: 6%;
+    }
+    .menu-box .menu .menu-item{
+        width: 40%;
+    }
+    .main .title h1{
+         font-size: 11rem;
+     }
+     .main .intro{
+         margin-left: -210px;
+     }
+     .main .intro P{
+         font-size: 3rem;
+     }
+     .main .landing-btn-box{
+         margin-left: -580px;
+     }
+   
+}

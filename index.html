@@ -13,28 +13,57 @@
     <div class="header">
       <!-- NAVBAR START HERE -->
       <div class="nav">
-        <div class="theme-box">
-          <div class="theme-btn" id="theme-btn"></div>
+        <div class="theme-box box-shadow-light" id="theme-box">
+          <div class="theme-btn" id="dark" title="change to dark mode">
+            <i class="far fa-moon"></i>
+          </div>
+          <div class="theme-btn d-none" id="light" title="change to light mode">
+            <i class="fas fa-sun"></i>
+          </div>
         </div>
-        <div class="menu-btn-box" id="menu-btn-box">
+        <div class="menu-btn-box box-shadow-light" id="menu-btn-box">
           <div class="menu-btn"></div>
         </div>
       </div>
       <div class="menu-box" id="menu-box">
-       
         <div class="menu">
-          <h1 class=" logo logo-large menu-item">S</h1>
-          <div class="menu-item"><a href="#about">about</a></div>
-          <div class="menu-item"><a href="#skill">skill</a></div>
-          <div class="menu-item"><a href="#project">project</a></div>
-          <div class="menu-item"><a href="#contact">contact</a></div>
+          <h1 class="logo text logo-large menu-item text-light">S</h1>
+          <div class="menu-item box-shadow-light">
+            <a href="#about" class="">about</a>
+          </div>
+          <div class="menu-item box-shadow-light">
+            <a href="#skill" class="">skill</a>
+          </div>
+          <div class="menu-item box-shadow-light">
+            <a href="#project" class="">project</a>
+          </div>
+          <div class="menu-item box-shadow-light">
+            <a href="#contact" class="">contact</a>
+          </div>
         </div>
       </div>
       <!-- NAVBAR END HERE -->
       <!-- LANDING PAGE START HERE -->
+      <div class="main">
+        <div class="title">
+          <h1 class="text text-light">Hi,</h1>
+          <h1 class="text text-light">I'm Sonu</h1>
+        </div>
+        <div class="intro">
+          <p class="text text-dark">Web developer / Freelancer</p>
+        </div>
+        <div class="landing-btn-box">
+          <a href="#about" class="mybtn about-btn box-shadow-dark text-color"
+            >about me</a
+          >
+          <a href="#contact" class="mybtn contact-btn box-shadow-dark text-color"
+            >contact me</a
+          >
+        </div>
+      </div>
       <!-- LANDING PAGE END HERE -->
     </div>
-   
+
     <script src="./js/all.min.js"></script>
     <script src="./js/app.js"></script>
   </body>

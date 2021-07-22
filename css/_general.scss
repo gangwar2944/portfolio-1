@@ -5,36 +5,70 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --dark:#121212;
+    --light:#f2f2f2;
+    --text-color: #20b7ff;
+    
+    
+}
 body{
-    background-color:$light-color;
-    color: $dark-color;
+    background-color:var(--light);
+    color:var(--dark);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .5;
     
 }
 a{
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: capitalize;
-    color: $grey-color;
+    color: var(--dark);
 }
 
 .box-shadow-dark{
     box-shadow:  -2px -2px 2px rgba(255,255,255,.04),
-                 2px 2px 2px rgba(0,0,0,.5);
+                  2px 2px 2px rgba(0,0,0,.5);
 }
 .box-shadow-light{
     box-shadow: 2px 2px 2px rgba(0,0,0,.14),
                 -2px -2px 2px rgba(255,255,255,1);
 }
-.logo{
-    color: $light-color;
-    
-    text-shadow: -2px -2px 2px rgba(255,255,255,.7),
-                   2px 2px 2px rgba(0,0,0,.07);
+.text-light{
+     color: var(--light);
+     text-shadow:  -2px -2px 2px rgba(255,255,255,1),
+                   2px 2px 2px rgba(0,0,0,.12);
 
     
 }
+.text-dark{
+    color: var(--light);
+    
+    text-shadow:  -2px -2px 2px rgba(255,255,255,.1),
+                   2px 2px 2px rgba(0,0,0,1);
+}
 .logo-large{
     font-size: 5rem;
-    border-bottom: 1px solid $grey-color;
+    border-bottom: 1px solid var(--dark);
+}
+.d-none{
+    display:none;
+    
+    
+}
+.dark-mode{
+    background-color: var(--dark);
+    
+}
+.light-mode{
+    background-color: var(--light);
+}
+.text-color{
+    color: var(--text-color);
+}
+.mybtn{
+    padding:20px;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 40px;
 }
