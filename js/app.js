@@ -13,21 +13,21 @@ const allText = document.querySelectorAll('.text');
 let menuOpen = false;
 // on load method
 addEventListener('load',()=>{
-
+    
     if(!document.cookie){ 
         // dark mode code
-        lightBtn.classList.remove("d-none");
-        darkBtn.classList.add("d-none");
-        darkMode();
-    }else{
-        // light mode code
-        lightBtn.classList.add('d-none');
+        lightBtn.classList.add("d-none");
         darkBtn.classList.remove("d-none");
         lightMode();
+    }else{
+        // light mode code
+        lightBtn.classList.remove('d-none');
+        darkBtn.classList.add("d-none");
+        darkMode();
         
         
     }
-})
+});
 
 // menu btn
 menuBtn.addEventListener('click',()=>{
@@ -85,7 +85,7 @@ function lightMode(){
 // sun
 lightBtn.addEventListener('click',()=>{
 
-    document.cookie = "theme=; expires=Thu, 25 Dec 2030 12:00:00 UTC; path=/";
+    document.cookie = "theme=; expires=Thu, 25 Dec 1975 12:00:00 UTC; path=/";
     lightBtn.classList.add("d-none");
     darkBtn.classList.remove("d-none");
     lightMode();
@@ -93,7 +93,7 @@ lightBtn.addEventListener('click',()=>{
 });
 // moon
 darkBtn.addEventListener('click',()=>{
-    document.cookie = "theme=1; expires=Thu, 25 Dec 1975 12:00:00 UTC; path=/";
+    document.cookie = "theme=1; expires=Thu, 25 Dec 2030 12:00:00 UTC; path=/";
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
     darkMode();
