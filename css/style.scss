@@ -148,7 +148,7 @@
                 height: 100%;
                 
                 font-size: 1.2rem;
-                letter-spacing: 5px;
+                letter-spacing: 3px;
                 color: var(--text-color);
                 &:hover{
                     color: var(--dark);
@@ -162,19 +162,23 @@
                transition: all 500ms ease-in-out;
                transition-delay: 0ms;
              }
-            &:nth-child(2){
-               transition: all 500ms ease-in-out;
-               transition-delay: 300ms;
-            }
+             &:nth-child(2){
+                transition: all 500ms ease-in-out;
+                transition-delay: 300ms;
+             }
             &:nth-child(3){
+               transition: all 500ms ease-in-out;
+               transition-delay: 400ms;
+            }
+            &:nth-child(4){
                 transition: all 500ms ease-in-out;
                 transition-delay: 500ms;
              }
-             &:nth-child(4){
+             &:nth-child(5){
                 transition: all 500ms ease-in-out;
                 transition-delay: 800ms;
              }
-             &:nth-child(5){
+             &:nth-child(6){
                 transition: all 500ms ease-in-out;
                 transition-delay: 1100ms;
              }

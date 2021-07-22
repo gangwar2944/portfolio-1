@@ -347,7 +347,7 @@ a:hover {
   width: 100%;
   height: 100%;
   font-size: 1.2rem;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: var(--text-color);
 }
 
@@ -375,18 +375,25 @@ a:hover {
 .menu-box .menu .menu-item:nth-child(3) {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+.menu-box .menu .menu-item:nth-child(4) {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
 }
 
-.menu-box .menu .menu-item:nth-child(4) {
+.menu-box .menu .menu-item:nth-child(5) {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   -webkit-transition-delay: 800ms;
           transition-delay: 800ms;
 }
 
-.menu-box .menu .menu-item:nth-child(5) {
+.menu-box .menu .menu-item:nth-child(6) {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   -webkit-transition-delay: 1100ms;
