@@ -16,12 +16,14 @@ const intro = document.querySelector('#intro');
 const landingBtnBox = document.querySelector('#landing-btn-box');
 let menuOpen = false;
 // on load method
-
-addEventListener('load',()=>{
+function init(){
     loader.style.display = "none";
     title.classList.add('active');
     intro.classList.add('active');
     landingBtnBox.classList.add('active');
+}
+addEventListener('load',()=>{
+    init();
     if(!document.cookie){ 
         // dark mode code
         lightBtn.classList.add("d-none");
@@ -32,8 +34,6 @@ addEventListener('load',()=>{
         lightBtn.classList.remove('d-none');
         darkBtn.classList.add("d-none");
         darkMode();
-        
-        
     }
 });
 
