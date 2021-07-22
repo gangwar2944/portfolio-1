@@ -6,6 +6,7 @@ const lightBtn = document.querySelector('#light');
 const menuBox = document.querySelector('#menu-box');
 const body = document.querySelector('body');
 const allShadow = document.querySelectorAll('.shadow');
+const allShadow2 = document.querySelectorAll('.shadow2');
 let colorCode = getComputedStyle(document.body);
 const allMenu = document.querySelectorAll('.menu-item');
 const allText = document.querySelectorAll('.text');
@@ -48,6 +49,10 @@ function darkMode(){
         item.classList.add("box-shadow-dark");
         item.classList.remove("box-shadow-light");
     });
+    allShadow2.forEach(item =>{
+        item.classList.add("box-shadow-dark-in");
+        item.classList.remove("box-shadow-light-in");
+    });
     allMenu.forEach(menu =>{
         menu.classList.remove("box-shadow-light");
         menu.classList.add("box-shadow-dark");
@@ -63,6 +68,10 @@ function lightMode(){
     allShadow.forEach(item =>{
         item.classList.remove("box-shadow-dark");
         item.classList.add("box-shadow-light");
+    });
+    allShadow2.forEach(item =>{
+        item.classList.remove("box-shadow-dark-in");
+        item.classList.add("box-shadow-light-in");
     });
     allMenu.forEach(menu =>{
         menu.classList.add("box-shadow-light");

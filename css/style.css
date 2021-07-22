@@ -38,6 +38,16 @@ a {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14), -2px -2px 2px white;
 }
 
+.box-shadow-dark-in {
+  -webkit-box-shadow: inset 2px 2px 2px black, inset -2px -2px 2px rgba(255, 255, 255, 0.12);
+          box-shadow: inset 2px 2px 2px black, inset -2px -2px 2px rgba(255, 255, 255, 0.12);
+}
+
+.box-shadow-light-in {
+  -webkit-box-shadow: 3px 3px 3px white, -3px -3px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 3px 3px white, -3px -3px 3px rgba(0, 0, 0, 0.16);
+}
+
 .text-light {
   color: var(--light);
   text-shadow: -2px -2px 2px white, 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -350,6 +360,7 @@ a {
   font-size: 1.3rem;
   letter-spacing: 1px;
   margin-top: -30px;
+  padding: 10px;
 }
 
 .main .landing-btn-box {
