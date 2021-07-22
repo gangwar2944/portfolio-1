@@ -28,6 +28,10 @@ a {
   color: var(--dark);
 }
 
+a:hover {
+  color: var(--dark);
+}
+
 .box-shadow-dark {
   -webkit-box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.5);
           box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -361,6 +365,7 @@ a {
   letter-spacing: 1px;
   margin-top: -30px;
   padding: 10px;
+  color: var(--dark);
 }
 
 .main .landing-btn-box {
