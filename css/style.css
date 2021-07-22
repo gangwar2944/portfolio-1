@@ -21,27 +21,6 @@ body {
   transition: .5;
 }
 
-.loading {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: var(--light);
-  z-index: 999999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -86,16 +65,7 @@ a:hover {
 .logo-large {
   font-size: 5rem;
   border-bottom: 1px solid var(--dark);
-}
-
-.mylogo {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-bottom: none;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
+  color: var(--light);
 }
 
 .d-none {
@@ -121,9 +91,41 @@ a:hover {
   margin-top: 40px;
 }
 
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--light);
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bottom-border {
   width: 50%;
   height: 5px;
+}
+
+.mylogo {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  color: var(--light);
 }
 
 .animate {
@@ -404,6 +406,7 @@ a:hover {
 }
 
 .main {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -427,6 +430,27 @@ a:hover {
 
 .main .title h1 {
   font-size: 4rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.main .title h1:nth-child(1) {
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.main .title h1:nth-child(2) {
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.main .title.active h1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .main .intro p {
@@ -435,6 +459,20 @@ a:hover {
   margin-top: -30px;
   padding: 10px;
   color: var(--dark);
+  overflow: hidden;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  visibility: hidden;
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+}
+
+.main .intro.active p {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  visibility: visible;
 }
 
 .main .landing-btn-box {
@@ -449,6 +487,25 @@ a:hover {
 .main .landing-btn-box a {
   margin: 30px 19px;
   display: block;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+}
+
+.main .landing-btn-box a:nth-child(1) {
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+}
+
+.main .landing-btn-box a:nth-child(2) {
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+}
+
+.main .landing-btn-box.active a {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media screen and (min-width: 992px) {
@@ -465,10 +522,10 @@ a:hover {
     font-size: 11rem;
   }
   .main .intro {
-    margin-left: -210px;
+    margin-left: -390px;
   }
   .main .intro P {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .main .landing-btn-box {
     margin-left: -580px;

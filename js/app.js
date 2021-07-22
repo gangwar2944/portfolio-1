@@ -11,11 +11,17 @@ const allShadow2 = document.querySelectorAll('.shadow2');
 let colorCode = getComputedStyle(document.body);
 const allMenu = document.querySelectorAll('.menu-item');
 const allText = document.querySelectorAll('.text');
+const title = document.querySelector('#title');
+const intro = document.querySelector('#intro');
+const landingBtnBox = document.querySelector('#landing-btn-box');
 let menuOpen = false;
 // on load method
 
 addEventListener('load',()=>{
     loader.style.display = "none";
+    title.classList.add('active');
+    intro.classList.add('active');
+    landingBtnBox.classList.add('active');
     if(!document.cookie){ 
         // dark mode code
         lightBtn.classList.add("d-none");
