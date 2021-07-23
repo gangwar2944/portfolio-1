@@ -71,6 +71,7 @@ allMenu.forEach(menu =>{
 function darkMode(){
     document.documentElement.style.setProperty('--light', '#121212');
     document.documentElement.style.setProperty('--dark', '#f2f2f2');
+    document.documentElement.style.setProperty('--grey-color', '#696969');
     allShadow.forEach(item =>{
         item.classList.add("box-shadow-dark");
         item.classList.remove("box-shadow-light");
@@ -93,6 +94,7 @@ function darkMode(){
 function lightMode(){
     document.documentElement.style.setProperty('--light', '#f2f2f2');
     document.documentElement.style.setProperty('--dark', '#121212');
+    document.documentElement.style.setProperty('--grey-color', '#a9a9a9');
     allShadow.forEach(item =>{
         item.classList.remove("box-shadow-dark");
         item.classList.add("box-shadow-light");
@@ -128,6 +130,6 @@ darkBtn.addEventListener('click',()=>{
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
     darkMode();
-});
 
+});
 

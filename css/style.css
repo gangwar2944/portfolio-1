@@ -11,6 +11,7 @@
   --dark:#121212;
   --light:#f2f2f2;
   --text-color: #20b7ff;
+  --grey-color:#a9a9a9;
 }
 
 html {
@@ -68,12 +69,35 @@ a:hover {
 
 .logo-large {
   font-size: 5rem;
-  border-bottom: 1px solid var(--dark);
   color: var(--light);
 }
 
 .d-none {
   display: none;
+}
+
+.p-1 {
+  padding: 5px;
+  margin: 2px 3px;
+  display: inline-block;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.content-color {
+  color: var(--grey-color);
 }
 
 .dark-mode {
@@ -306,7 +330,7 @@ a:hover {
   -webkit-transition: .5s;
   transition: .5s;
 }
-  
+
 .menu-box {
   width: 100%;
   position: fixed;
@@ -468,10 +492,11 @@ a:hover {
   letter-spacing: 1px;
   margin-top: -30px;
   padding: 10px;
-  color: var(--dark);
+  color: var(--grey-color);
   overflow: hidden;
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
+  font-weight: 500;
   visibility: hidden;
   -webkit-transition: all 900ms ease-in-out;
   transition: all 900ms ease-in-out;
@@ -518,7 +543,6 @@ a:hover {
           transform: scale(1);
 }
 
-
 .alert {
   width: 60%;
   min-height: 10vh;
@@ -531,7 +555,32 @@ a:hover {
   transition: all .9s ease-in-out;
 }
 
+.about-box {
+  width: 100%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+}
 
+.about-box .about-body {
+  width: 100%;
+  padding: 0px 19px;
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+}
 
 @media screen and (min-width: 992px) {
   .menu-box .menu {
@@ -554,6 +603,9 @@ a:hover {
   }
   .main .landing-btn-box {
     margin-left: -580px;
+  }
+  .about-box .about-body {
+    width: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */

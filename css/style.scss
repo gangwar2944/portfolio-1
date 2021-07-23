@@ -243,9 +243,10 @@
             letter-spacing: 1px;
             margin-top: -30px;
             padding: 10px;
-            color: var(--dark);
+            color: var(--grey-color);
             overflow: hidden;
             transform: translateX(200%);
+            font-weight: 500;
             visibility: hidden;
             transition: all 900ms ease-in-out;
             // box-shadow:  3px 3px 3px rgba(255,255,255,1),
@@ -292,7 +293,21 @@
     transition: all .9s ease-in-out;
 }
 // about section start here
+.about-box{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 900ms ease-in-out;
+    .about-body{
+        width: 100%;
+        padding: 0px 19px;
+        transition: all 900ms ease-in-out;
 
+    }
+}
 
 // for large devices
 @media screen and (min-width:992px) {
@@ -316,4 +331,12 @@
          margin-left: -580px;
      }
    
+    //  about
+    .about-box{
+        
+        .about-body{
+            width: 40%;
+    
+        }
+    }
 }
