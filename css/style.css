@@ -518,6 +518,18 @@ a:hover {
           transform: scale(1);
 }
 
+.alert {
+  width: 60%;
+  min-height: 10vh;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 5px 10px;
+  text-align: center;
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out;
+}
+
 @media screen and (min-width: 992px) {
   .menu-box .menu {
     -webkit-box-align: end;
