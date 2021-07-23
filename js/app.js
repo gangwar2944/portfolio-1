@@ -141,7 +141,5 @@ darkBtn.addEventListener('click',()=>{
 
 
 
-   darkMode();
-});
 
 
