@@ -14,9 +14,7 @@ const allText = document.querySelectorAll('.text');
 const title = document.querySelector('#title');
 const intro = document.querySelector('#intro');
 const landingBtnBox = document.querySelector('#landing-btn-box');
-
 const alert = document.querySelector('.alert');
-
 
 let menuOpen = false;
 // on load method
@@ -25,9 +23,7 @@ function init(){
     title.classList.add('active');
     intro.classList.add('active');
     landingBtnBox.classList.add('active');
-
     myalert();
-
     
 }
 function myalert(){
@@ -123,11 +119,7 @@ lightBtn.addEventListener('click',()=>{
     document.cookie = "theme=; expires=Thu, 25 Dec 1975 12:00:00 UTC; path=/";
     lightBtn.classList.add("d-none");
     darkBtn.classList.remove("d-none");
-
     lightMode();
-
-     lightMode();
-
 
 });
 // moon
@@ -135,11 +127,7 @@ darkBtn.addEventListener('click',()=>{
     document.cookie = "theme=1; expires=Thu, 25 Dec 2030 12:00:00 UTC; path=/";
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
-
     darkMode();
 });
-
-
-
 
 
