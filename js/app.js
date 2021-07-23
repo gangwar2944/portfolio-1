@@ -14,6 +14,10 @@ const allText = document.querySelectorAll('.text');
 const title = document.querySelector('#title');
 const intro = document.querySelector('#intro');
 const landingBtnBox = document.querySelector('#landing-btn-box');
+const allAboutBtn = document.querySelectorAll('.btn');
+const allAboutContent = document.querySelectorAll('.about');
+const allAngleDown = document.querySelectorAll('.fa-angle-down');
+
 let menuOpen = false;
 // on load method
 function init(){
@@ -21,6 +25,8 @@ function init(){
     title.classList.add('active');
     intro.classList.add('active');
     landingBtnBox.classList.add('active');
+    allAboutContent[0].classList.add("active");
+    
 }
 addEventListener('load',()=>{
     init();
@@ -28,11 +34,19 @@ addEventListener('load',()=>{
         // dark mode code
         lightBtn.classList.add("d-none");
         darkBtn.classList.remove("d-none");
+        allAboutBtn[0].classList.remove('box-shadow-dark-in');
+        allAboutBtn[0].classList.add('box-shadow-light-in');
+        allAboutContent[0].classList.remove('box-shadow-dark-in');
+        allAboutContent[0].classList.add('box-shadow-light-in');
         lightMode();
     }else{
         // light mode code
         lightBtn.classList.remove('d-none');
         darkBtn.classList.add("d-none");
+        allAboutBtn[0].classList.add('box-shadow-dark-in');
+        allAboutBtn[0].classList.remove('box-shadow-light-in');
+        allAboutContent[0].classList.add('box-shadow-dark-in');
+        allAboutContent[0].classList.remove('box-shadow-light-in');
         darkMode();
     }
 });
@@ -76,6 +90,8 @@ function darkMode(){
         text.classList.add("text-dark");
         text.classList.remove("text-light");
     });
+  
+  
 }
 function lightMode(){
     document.documentElement.style.setProperty('--light', '#f2f2f2');
@@ -96,6 +112,9 @@ function lightMode(){
         text.classList.remove("text-dark");
         text.classList.add("text-light");
     });
+
+
+   
 }
 // sun
 lightBtn.addEventListener('click',()=>{
@@ -103,6 +122,8 @@ lightBtn.addEventListener('click',()=>{
     document.cookie = "theme=; expires=Thu, 25 Dec 1975 12:00:00 UTC; path=/";
     lightBtn.classList.add("d-none");
     darkBtn.classList.remove("d-none");
+    
+   
     lightMode();
 
 });
@@ -111,6 +132,48 @@ darkBtn.addEventListener('click',()=>{
     document.cookie = "theme=1; expires=Thu, 25 Dec 2030 12:00:00 UTC; path=/";
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
+   
+   
     darkMode();
 });
 
+// about section
+allAboutBtn.forEach((link,index) => {
+   
+    link.addEventListener('click',function(e){
+        e.preventDefault();
+      allAboutBtn.forEach(btn =>{
+
+        btn.classList.remove('box-shadow-light-in');
+        
+        if(!document.cookie){ 
+            // dark mode code
+            btn.classList.remove('box-shadow-light-in');
+           
+        }else{
+            // light mode code
+            btn.classList.remove('box-shadow-dark-in');
+            
+        }
+        allAboutContent.forEach(about =>{
+         about.classList.remove("active");
+        });
+       
+      });
+      if(!document.cookie){ 
+        // dark mode code
+        this.classList.add('box-shadow-light-in');
+        
+        allAboutContent[index].classList.add("active");
+        allAboutContent[index].classList.add("box-shadow-light-in");
+    }else{
+        // light mode code
+        this.classList.add('box-shadow-dark-in');
+        
+        allAboutContent[index].classList.add("active");
+        allAboutContent[index].classList.add("box-shadow-dark-in");
+ }
+      
+ });
+  
+});
