@@ -14,9 +14,7 @@ const allText = document.querySelectorAll('.text');
 const title = document.querySelector('#title');
 const intro = document.querySelector('#intro');
 const landingBtnBox = document.querySelector('#landing-btn-box');
-
 const alert = document.querySelector('.alert');
-
 
 let menuOpen = false;
 // on load method
@@ -25,9 +23,7 @@ function init(){
     title.classList.add('active');
     intro.classList.add('active');
     landingBtnBox.classList.add('active');
-
     myalert();
-
     
 }
 function myalert(){
@@ -134,4 +130,6 @@ darkBtn.addEventListener('click',()=>{
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
     darkMode();
+
 });
+
