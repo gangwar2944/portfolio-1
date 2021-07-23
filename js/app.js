@@ -75,6 +75,7 @@ allMenu.forEach(menu =>{
 function darkMode(){
     document.documentElement.style.setProperty('--light', '#121212');
     document.documentElement.style.setProperty('--dark', '#f2f2f2');
+    document.documentElement.style.setProperty('--grey-color', '#696969');
     allShadow.forEach(item =>{
         item.classList.add("box-shadow-dark");
         item.classList.remove("box-shadow-light");
@@ -97,6 +98,7 @@ function darkMode(){
 function lightMode(){
     document.documentElement.style.setProperty('--light', '#f2f2f2');
     document.documentElement.style.setProperty('--dark', '#121212');
+    document.documentElement.style.setProperty('--grey-color', '#a9a9a9');
     allShadow.forEach(item =>{
         item.classList.remove("box-shadow-dark");
         item.classList.add("box-shadow-light");
@@ -123,11 +125,7 @@ lightBtn.addEventListener('click',()=>{
     document.cookie = "theme=; expires=Thu, 25 Dec 1975 12:00:00 UTC; path=/";
     lightBtn.classList.add("d-none");
     darkBtn.classList.remove("d-none");
-
     lightMode();
-
-     lightMode();
-
 
 });
 // moon
@@ -135,13 +133,5 @@ darkBtn.addEventListener('click',()=>{
     document.cookie = "theme=1; expires=Thu, 25 Dec 2030 12:00:00 UTC; path=/";
     lightBtn.classList.remove('d-none');
     darkBtn.classList.add("d-none"); 
-
     darkMode();
 });
-
-
-
-   darkMode();
-});
-
-
