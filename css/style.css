@@ -306,7 +306,7 @@ a:hover {
   -webkit-transition: .5s;
   transition: .5s;
 }
-
+  
 .menu-box {
   width: 100%;
   position: fixed;
@@ -518,6 +518,7 @@ a:hover {
           transform: scale(1);
 }
 
+
 .alert {
   width: 60%;
   min-height: 10vh;
@@ -529,6 +530,8 @@ a:hover {
   -webkit-transition: all .9s ease-in-out;
   transition: all .9s ease-in-out;
 }
+
+
 
 @media screen and (min-width: 992px) {
   .menu-box .menu {
