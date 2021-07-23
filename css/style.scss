@@ -282,51 +282,7 @@
 }
 
 // about section start here
-.about-box{
-    position: relative;
-    width: 100%;
-    min-height: 20vh;
-    overflow: hidden;
-     .about-btn{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-         .btn{
-            display: block;
-            text-align: center;
-            padding: 10px;
-            flex-grow: 1;
-           
-        }
-    }
-    .about-content{
-        position: relative;
-        width: 100%;
-        padding: 5px 10px;
-        height: 20vh;
-        div{
-            position: absolute;
-            transform: translateX(100%);
-            transition: all .7s ease-in-out;
-            padding: 10px 20px;
-           
-            
-            height: 100%;
-            p{
-                text-align: center;
-                word-spacing: 5px;
-                
-            }
-        }
-        div.active{
-            transform: translateX(0);
-        }
-        div.right-move{
-            transform: translateX(-100%);
-        }
-    }
-}
+
 // for large devices
 @media screen and (min-width:992px) {
     .menu-box .menu{
