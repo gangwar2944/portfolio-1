@@ -156,7 +156,7 @@ a:hover{
     width: 100%;
     overflow-y: hidden;
     min-height: 300px;
-     margin: 20px auto;
+     margin: 14px auto;
      padding-bottom: 20px;
     &::-webkit-scrollbar{
         display: none;
@@ -197,9 +197,7 @@ a:hover{
                  letter-spacing: 1.5px;
              }
          }
-         &:nth-child(1){
-             margin-left:90px;
-         }
+         
      }
 }
 
