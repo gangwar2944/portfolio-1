@@ -163,7 +163,7 @@ a:hover{
      left: 50%;
      transform: translateX(-50%) scale(0);
      opacity: 0;
-        width: 73%;
+        width: 90%;
         height: 300px;
         
         transition: all .7s ease-in-out;
@@ -210,15 +210,28 @@ a:hover{
         justify-content: center;
         align-items: center;
         font-size: 2.4rem;
+        background-color: var(--light);
     }
     .left-nevigation{
-        top: 17%;
+        top: 10%;
         left: 2%;
     }
     .right-nevigation{
-        top: 17%;
+        top: 10%;
         right: 2%;
     }
+}
+.fade{
+    transition: all 900ms ease-in-out;
+}
+.fade-in{
+    transform: scale(0);
+    opacity: 0;
+    
+}
+.fade-out{
+    transform: scale(1);
+    opacity: 1;
 }
 .animate{
     transform: translateY(10px);
