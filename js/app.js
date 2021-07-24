@@ -15,6 +15,10 @@ const title = document.querySelector('#title');
 const intro = document.querySelector('#intro');
 const landingBtnBox = document.querySelector('#landing-btn-box');
 const alert = document.querySelector('.alert');
+const allSlider = document.querySelectorAll('.mycard');
+const leftSlide = document.querySelector('#left-slider');
+const rightSlide = document.querySelector("#right-slider");
+let currentSlide = 0;
 
 let menuOpen = false;
 // on load method
@@ -23,6 +27,8 @@ function init(){
     title.classList.add('active');
     intro.classList.add('active');
     landingBtnBox.classList.add('active');
+   // allSlider[0].classList.add('active');
+   showClider(0);
     myalert();
     
 }
@@ -133,3 +139,35 @@ darkBtn.addEventListener('click',()=>{
 
 });
 
+// slider
+// hide slider
+function removeaALLSlide(){
+    allSlider.forEach(slide =>{
+        slide.classList.remove('active');
+    })
+}
+// show slider
+function showClider(current){
+    allSlider[current].classList.add('active');
+}
+leftSlide.addEventListener('click',function(e){
+    e.preventDefault();
+    removeaALLSlide();
+    currentSlide++;
+    if(currentSlide >= allSlider.length){
+        currentSlide = 0;
+    }
+    
+    showClider(currentSlide);
+});
+rightSlide.addEventListener('click',function(e){
+    e.preventDefault();
+    removeaALLSlide();
+    
+    if(currentSlide <= 0){
+        currentSlide = allSlider.length;
+    }
+    currentSlide--;
+    
+    showClider(currentSlide);
+});
