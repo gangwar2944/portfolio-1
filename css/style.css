@@ -38,21 +38,25 @@ a:hover {
 }
 
 .box-shadow-dark {
+  border-radius: 7px;
   -webkit-box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.5);
           box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .box-shadow-light {
+  border-radius: 7px;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14), -2px -2px 2px white;
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14), -2px -2px 2px white;
 }
 
 .box-shadow-dark-in {
+  border-radius: 7px;
   -webkit-box-shadow: inset 2px 2px 2px black, inset -2px -2px 2px rgba(255, 255, 255, 0.12);
           box-shadow: inset 2px 2px 2px black, inset -2px -2px 2px rgba(255, 255, 255, 0.12);
 }
 
 .box-shadow-light-in {
+  border-radius: 7px;
   -webkit-box-shadow: 3px 3px 3px white, -3px -3px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 3px 3px 3px white, -3px -3px 3px rgba(0, 0, 0, 0.16);
 }
@@ -84,6 +88,10 @@ a:hover {
   text-transform: capitalize;
 }
 
+.highlight {
+  color: var(--text-color);
+}
+
 .text-center {
   text-align: center;
 }
@@ -98,6 +106,7 @@ a:hover {
 
 .content-color {
   color: var(--grey-color);
+  text-transform: capitalize;
 }
 
 .dark-mode {
@@ -156,6 +165,95 @@ a:hover {
   color: var(--dark);
 }
 
+.slider-container {
+  position: relative;
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+  overflow-y: hidden;
+  min-height: 200px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mycard-box {
+  width: 100%;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.mycard-box .mycard {
+  white-space: initial;
+  display: inline-block;
+  width: 300px;
+  min-height: 250px;
+  margin-right: 30px;
+}
+
+.mycard-box .mycard .mycard-header {
+  width: 100%;
+  height: 140px;
+}
+
+.mycard-box .mycard .mycard-header img {
+  width: 100%;
+  height: 100%;
+}
+
+.mycard-box .mycard .mycard-body {
+  padding: 3px 8px;
+}
+
+.mycard-box .mycard .mycard-body h3 {
+  font-size: 1rem;
+}
+
+.mycard-box .mycard .mycard-body p {
+  font-size: .8rem;
+}
+
+.mycard-box .mycard:nth-child(1) {
+  margin-left: 90px;
+}
+
+.nevigation-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nevigation-btn a {
+  position: absolute;
+  padding: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.4rem;
+}
+
+.nevigation-btn .left-nevigation {
+  top: -55%;
+  left: 3%;
+}
+
+.nevigation-btn .right-nevigation {
+  top: -55%;
+  right: 3%;
+}
+
 .animate {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
@@ -186,6 +284,20 @@ a:hover {
   100% {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .slider-container {
+    width: 60%;
+  }
+  .mycard {
+    width: 25%;
+  }
+  .nevigation-btn .right-nevigation {
+    top: -55%;
+    right: 3%;
+    z-index: 99;
   }
 }
 
@@ -320,15 +432,23 @@ a:hover {
   z-index: 1000;
 }
 
-.nav .theme-box:hover .theme-btn {
-  color: var(--dark);
+.nav .theme-box:hover .theme-btn .fa-sun,
+.nav .theme-box:hover .theme-btn .fa-moon {
+  color: #20b7ff;
 }
 
 .nav .theme-box .theme-btn {
   font-size: 1.7rem;
-  color: var(--text-color);
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.nav .theme-box .theme-btn .fa-moon {
+  color: #121212;
+}
+
+.nav .theme-box .theme-btn .fa-sun {
+  color: #f2f2f2;
 }
 
 .menu-box {
