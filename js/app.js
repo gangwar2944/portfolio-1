@@ -201,7 +201,7 @@ if(distanceFromTop > 200){
     
 }
 // animate about content
-if(distanceFromTop > 330){
+if(distanceFromTop > 430){
     allFadeElement[1].classList.remove('fade-in');
 }
 // animate services heading
@@ -209,7 +209,7 @@ if(distanceFromTop > 550){
     allFadeElement[2].classList.remove('fade-in');
 }
 // animate sevices content
-if(distanceFromTop > 770 && distanceFromTop < 800){
+if(distanceFromTop > 770){
    
     if(currentSlide === 0){
         showSlider(0);
