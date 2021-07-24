@@ -98,13 +98,21 @@
         top: 87px;
         right: 6%;
         z-index: 1000;
-        &:hover .theme-btn{
-             color: var(--dark);
+        &:hover .theme-btn .fa-sun,
+        &:hover .theme-btn .fa-moon{
+             color: #20b7ff;
         }
         .theme-btn{
             font-size: 1.7rem;
-            color: var(--text-color);;
+           
             transition: .5s;
+
+          .fa-moon{
+              color: #121212;
+          }
+          .fa-sun{
+              color: #f2f2f2;
+          }
             
         }
     }
@@ -308,6 +316,7 @@
 
     }
 }
+// service section start here
 
 // for large devices
 @media screen and (min-width:992px) {

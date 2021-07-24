@@ -35,18 +35,22 @@ a:hover{
 }
 
 .box-shadow-dark{
+    border-radius: 7px;
     box-shadow:  -2px -2px 2px rgba(255,255,255,.04),
                   2px 2px 2px rgba(0,0,0,.5);
 }
 .box-shadow-light{
+    border-radius: 7px;
     box-shadow: 2px 2px 2px rgba(0,0,0,.14),
                 -2px -2px 2px rgba(255,255,255,1);
 }
 .box-shadow-dark-in{
+    border-radius: 7px;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,1),
                 inset -2px -2px 2px rgba(255,255,255,.12);
 }
 .box-shadow-light-in{
+    border-radius: 7px;
     box-shadow:  3px 3px 3px rgba(255,255,255,1),
                  -3px -3px 3px rgba(0,0,0,.16);
 }
@@ -81,6 +85,9 @@ a:hover{
     color: var(--text-color);
     text-transform: capitalize;
 }
+.highlight{
+    color: var(--text-color);
+}
 .text-center{
     text-align: center;
 }
@@ -92,6 +99,7 @@ a:hover{
 }
 .content-color{
     color: var(--grey-color);
+    text-transform: capitalize;
 }
 .dark-mode{
     background-color: var(--dark);
@@ -141,6 +149,81 @@ a:hover{
     // text-shadow:  -2px -2px 2px rgba(255,255,255,1),
     //                2px 2px 2px rgba(0,0,0,.12);
 }
+.slider-container{
+    position: relative;
+    display: block;
+    overflow-x: scroll;
+    width: 100%;
+    overflow-y: hidden;
+    min-height: 200px;
+     margin: 20px auto;
+     padding-bottom: 20px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.mycard-box{
+ width: 100%;
+ position: relative;
+ display: block;
+ white-space: nowrap;
+ margin: 0 auto;
+    .mycard{
+        white-space:initial;
+        display: inline-block;
+        width: 300px;
+        min-height: 250px;
+        margin-right: 30px;
+        
+    
+       .mycard-header{
+             width: 100%;
+             height: 140px;
+             img{
+                 width: 100%;
+                 height: 100%;
+             }
+         }
+         .mycard-body{
+             padding: 3px 8px;
+     
+             h3{
+                 font-size: 1rem;
+             }
+             p{
+                 font-size: .8rem;
+             }
+         }
+         &:nth-child(1){
+             margin-left:90px;
+         }
+     }
+}
+
+.nevigation-btn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    a{
+        position: absolute;
+        padding: 2%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+    }
+    .left-nevigation{
+        top: -55%;
+        left: 3%;
+    }
+    .right-nevigation{
+        top: -55%;
+        right: 3%;
+    }
+}
 .animate{
     transform: translateY(10px);
     animation-name: bounce;
@@ -155,4 +238,19 @@ a:hover{
     100%{
         transform: translateY(-100px);
     }
+}
+
+// for large devices
+@media screen and (min-width:992px) {
+   .slider-container{
+       width: 60%;
+   }
+    .mycard{
+       width: 25%;
+   }
+   .nevigation-btn .right-nevigation{
+    top: -55%;
+    right: 3%;
+    z-index: 99;
+}
 }
