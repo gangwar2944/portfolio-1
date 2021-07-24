@@ -155,7 +155,7 @@ a:hover{
     overflow-x: scroll;
     width: 100%;
     overflow-y: hidden;
-    min-height: 200px;
+    min-height: 300px;
      margin: 20px auto;
      padding-bottom: 20px;
     &::-webkit-scrollbar{
@@ -172,7 +172,7 @@ a:hover{
         white-space:initial;
         display: inline-block;
         width: 300px;
-        min-height: 250px;
+        height: 300px;
         margin-right: 30px;
         
     
@@ -189,9 +189,12 @@ a:hover{
      
              h3{
                  font-size: 1rem;
+                 letter-spacing: 2px;
              }
              p{
                  font-size: .8rem;
+                 padding-top: 5px;
+                 letter-spacing: 1.5px;
              }
          }
          &:nth-child(1){
