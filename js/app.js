@@ -21,8 +21,11 @@ const rightSlide = document.querySelector("#right-slider");
 const allFadeElement = document.querySelectorAll('.fade');
 let currentSlide = 0;
 let menuOpen = false;
+
+
 //============= ALL FUNCTIONS ================
 // under developement function
+
 
 function myalert(){
     setTimeout(()=>{
@@ -92,6 +95,9 @@ function showSlider(current){
     allSlider[current].classList.add('active');
 }
 
+
+
+
 // init functions
 function init(){
     loader.style.display = "none";
@@ -101,13 +107,14 @@ function init(){
    // allSlider[0].classList.add('active');
    currentSlide = 0;
      myalert();
-    
+     
 }
 
 // ================== ALL EVENT LISTENER =================
 // load event listener
 addEventListener('load',()=>{
     init();
+    
     if(!document.cookie){ 
         // dark mode code
         lightBtn.classList.add("d-none");
@@ -212,7 +219,7 @@ if(distanceFromTop > 550){
 if(distanceFromTop > 770){
    
     if(currentSlide === 0){
-        showSlider(0);
+       showSlider(0);
     }
 }
     
