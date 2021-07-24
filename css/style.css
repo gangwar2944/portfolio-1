@@ -172,7 +172,7 @@ a:hover {
   width: 100%;
   overflow-y: hidden;
   min-height: 300px;
-  margin: 20px auto;
+  margin: 14px auto;
   padding-bottom: 20px;
 }
 
@@ -219,10 +219,6 @@ a:hover {
   font-size: .8rem;
   padding-top: 5px;
   letter-spacing: 1.5px;
-}
-
-.mycard-box .mycard:nth-child(1) {
-  margin-left: 90px;
 }
 
 .nevigation-btn {
@@ -706,7 +702,7 @@ a:hover {
 }
 
 .services-box {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 992px) {
