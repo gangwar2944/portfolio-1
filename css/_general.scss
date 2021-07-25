@@ -87,6 +87,9 @@ a:hover{
 }
 .highlight{
     color: var(--text-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+   
 }
 .text-center{
     text-align: center;
@@ -99,7 +102,7 @@ a:hover{
 }
 .content-color{
     color: var(--grey-color);
-    text-transform: capitalize;
+    
 }
 .dark-mode{
     background-color: var(--dark);
@@ -157,32 +160,30 @@ a:hover{
  position: relative;
  display: flex;
  flex-wrap: nowrap;
- margin: 0 auto;
+ margin: 20px auto;
     .mycard{
      position: absolute;
      left: 50%;
      transform: translateX(-50%) scale(0);
      opacity: 0;
         width: 90%;
-        height: 300px;
+        min-height: 200px;
+        padding-bottom: 10px;
         
         transition: all .7s ease-in-out;
     
        .mycard-header{
              width: 100%;
-             height: 140px;
+             height: 150px;
              img{
                  width: 100%;
                  height: 100%;
              }
          }
          .mycard-body{
-             padding: 3px 8px;
+             padding: 10px 10px;
      
-             h3{
-                 font-size: 1rem;
-                 letter-spacing: 2px;
-             }
+             
              p{
                  font-size: .8rem;
                  padding-top: 5px;

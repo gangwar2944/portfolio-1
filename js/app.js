@@ -20,6 +20,7 @@ const leftSlide = document.querySelector('#left-slider');
 const rightSlide = document.querySelector("#right-slider");
 const allFadeElement = document.querySelectorAll('.fade');
 let currentSlide = 0;
+let animateSlide = 0; //for animationg all slide
 let menuOpen = false;
 
 
@@ -95,7 +96,16 @@ function showSlider(current){
     allSlider[current].classList.add('active');
 }
 
+// animating all slider
 
+let intervalid = setInterval(function(){
+    removeaALLSlide();
+     if(animateSlide === allSlider.length){
+        animateSlide = 0;
+    }
+    showSlider(animateSlide);
+    animateSlide++;
+  },15000);
 
 
 // init functions
@@ -169,8 +179,8 @@ darkBtn.addEventListener('click',()=>{
 });
 
 
-// slider left btn event listener
-leftSlide.addEventListener('click',function(e){
+// slider right btn event listener
+rightSlide.addEventListener('click',function(e){
     e.preventDefault();
     removeaALLSlide();
     currentSlide++;
@@ -181,8 +191,8 @@ leftSlide.addEventListener('click',function(e){
     showSlider(currentSlide);
 });
 
-// slider right btn event listener
-rightSlide.addEventListener('click',function(e){
+// slider left btn event listener
+leftSlide.addEventListener('click',function(e){
     e.preventDefault();
     removeaALLSlide();
     
@@ -198,6 +208,7 @@ addEventListener('scroll',()=>{
 let distanceFromTop = window.pageYOffset;
 // animate about heading
 if(distanceFromTop < 50){
+   removeaALLSlide();
     allFadeElement.forEach(el =>{
         
         el.classList.add('fade-in');
@@ -212,11 +223,11 @@ if(distanceFromTop > 430){
     allFadeElement[1].classList.remove('fade-in');
 }
 // animate services heading
-if(distanceFromTop > 550){
+if(distanceFromTop > 650){
     allFadeElement[2].classList.remove('fade-in');
 }
 // animate sevices content
-if(distanceFromTop > 770){
+if(distanceFromTop > 750){
    
     if(currentSlide === 0){
        showSlider(0);
@@ -224,3 +235,4 @@ if(distanceFromTop > 770){
 }
     
 });
+
