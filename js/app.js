@@ -95,7 +95,12 @@ function showSlider(current){
     allSlider[current].classList.add('active');
 }
 
-
+// animating all slider
+setInterval(function(){
+    let random = Math.floor(Math.random() * allSlider.length);
+     removeaALLSlide();
+     showSlider(random);
+  },4000);
 
 
 // init functions
@@ -169,8 +174,8 @@ darkBtn.addEventListener('click',()=>{
 });
 
 
-// slider left btn event listener
-leftSlide.addEventListener('click',function(e){
+// slider right btn event listener
+rightSlide.addEventListener('click',function(e){
     e.preventDefault();
     removeaALLSlide();
     currentSlide++;
@@ -181,8 +186,8 @@ leftSlide.addEventListener('click',function(e){
     showSlider(currentSlide);
 });
 
-// slider right btn event listener
-rightSlide.addEventListener('click',function(e){
+// slider left btn event listener
+leftSlide.addEventListener('click',function(e){
     e.preventDefault();
     removeaALLSlide();
     
@@ -212,11 +217,11 @@ if(distanceFromTop > 430){
     allFadeElement[1].classList.remove('fade-in');
 }
 // animate services heading
-if(distanceFromTop > 550){
+if(distanceFromTop > 650){
     allFadeElement[2].classList.remove('fade-in');
 }
 // animate sevices content
-if(distanceFromTop > 770){
+if(distanceFromTop > 870){
    
     if(currentSlide === 0){
        showSlider(0);
@@ -224,3 +229,4 @@ if(distanceFromTop > 770){
 }
     
 });
+

@@ -90,6 +90,8 @@ a:hover {
 
 .highlight {
   color: var(--text-color);
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .text-center {
@@ -106,7 +108,6 @@ a:hover {
 
 .content-color {
   color: var(--grey-color);
-  text-transform: capitalize;
 }
 
 .dark-mode {
@@ -173,7 +174,7 @@ a:hover {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .mycard-box .mycard {
@@ -183,14 +184,15 @@ a:hover {
           transform: translateX(-50%) scale(0);
   opacity: 0;
   width: 90%;
-  height: 300px;
+  min-height: 200px;
+  padding-bottom: 10px;
   -webkit-transition: all .7s ease-in-out;
   transition: all .7s ease-in-out;
 }
 
 .mycard-box .mycard .mycard-header {
   width: 100%;
-  height: 140px;
+  height: 150px;
 }
 
 .mycard-box .mycard .mycard-header img {
@@ -199,12 +201,7 @@ a:hover {
 }
 
 .mycard-box .mycard .mycard-body {
-  padding: 3px 8px;
-}
-
-.mycard-box .mycard .mycard-body h3 {
-  font-size: 1rem;
-  letter-spacing: 2px;
+  padding: 10px 10px;
 }
 
 .mycard-box .mycard .mycard-body p {
