@@ -20,7 +20,7 @@ const leftSlide = document.querySelector('#left-slider');
 const rightSlide = document.querySelector("#right-slider");
 const allFadeElement = document.querySelectorAll('.fade');
 let currentSlide = 0;
-let animateSlide = 0; //for animationg all slide
+// let animateSlide = 0; //for animationg all slide
 let menuOpen = false;
 
 
@@ -98,14 +98,14 @@ function showSlider(current){
 
 // animating all slider
 
-let intervalid = setInterval(function(){
-    removeaALLSlide();
-     if(animateSlide === allSlider.length){
-        animateSlide = 0;
-    }
-    showSlider(animateSlide);
-    animateSlide++;
-  },15000);
+// let intervalid = setInterval(function(){
+//     removeaALLSlide();
+//      if(animateSlide === allSlider.length){
+//         animateSlide = 0;
+//     }
+//     showSlider(animateSlide);
+//     animateSlide++;
+//   },15000);
 
 
 // init functions
@@ -208,7 +208,7 @@ addEventListener('scroll',()=>{
 let distanceFromTop = window.pageYOffset;
 // animate about heading
 if(distanceFromTop < 50){
-   removeaALLSlide();
+//    removeaALLSlide();
     allFadeElement.forEach(el =>{
         
         el.classList.add('fade-in');
