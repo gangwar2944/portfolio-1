@@ -216,7 +216,7 @@ if(distanceFromTop < 50){
         el.classList.add('fade-in');
     });
 }
-if(distanceFromTop > allFadeElement[0].getBoundingClientRect().top - 100){
+if(distanceFromTop > allFadeElement[0].getBoundingClientRect().top - 220){
     allFadeElement[0].classList.remove('fade-in');
     
 }

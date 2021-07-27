@@ -178,14 +178,6 @@ a:hover {
       -ms-user-select: none;
           user-select: none;
   z-index: 999999;
-  -webkit-animation-name: scrollDown;
-          animation-name: scrollDown;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   font-size: .6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,16 +196,16 @@ a:hover {
           transform: rotate(-90deg);
   position: fixed;
   color: var(--text-color);
-}
-
-.scroll-down-box div:nth-child(1) {
-  top: 78vh;
-  left: -2%;
-}
-
-.scroll-down-box div:nth-child(2) {
-  top: 80vh;
-  left: 84%;
+  top: 80%;
+  left: 2%;
+  -webkit-animation-name: scrollDown;
+          animation-name: scrollDown;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes scrollDown {
@@ -245,6 +237,7 @@ a:hover {
   z-index: 99999999999;
   right: 5%;
   background-color: var(--text-color);
+  color: #fff;
   padding: 10px;
   border-bottom-left-radius: 10px;
 }
