@@ -166,6 +166,68 @@ a:hover {
   color: var(--dark);
 }
 
+.scroll-down-box {
+  position: relative;
+}
+
+.scroll-down-box div {
+  position: fixed;
+  top: 80vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 999999;
+  -webkit-animation-name: scrollDown;
+          animation-name: scrollDown;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: .6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.scroll-down-box div span {
+  -webkit-writing-mode: tb-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: tb-lr;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: fixed;
+  color: var(--text-color);
+}
+
+.scroll-down-box div:nth-child(1) {
+  top: 78vh;
+  left: -2%;
+}
+
+.scroll-down-box div:nth-child(2) {
+  top: 80vh;
+  left: 84%;
+}
+
+@-webkit-keyframes scrollDown {
+  100% {
+    top: 90vh;
+  }
+}
+
+@keyframes scrollDown {
+  100% {
+    top: 90vh;
+  }
+}
+
 .mycard-box {
   width: 100%;
   position: relative;
@@ -175,6 +237,16 @@ a:hover {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin: 20px auto;
+  min-height: 300px;
+}
+
+.mycard-box .slider-number {
+  position: absolute;
+  z-index: 99999999999;
+  right: 5%;
+  background-color: var(--text-color);
+  padding: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .mycard-box .mycard {
@@ -242,12 +314,12 @@ a:hover {
 }
 
 .nevigation-btn .left-nevigation {
-  top: 10%;
+  top: -55%;
   left: 2%;
 }
 
 .nevigation-btn .right-nevigation {
-  top: 10%;
+  top: -55%;
   right: 2%;
 }
 
@@ -314,14 +386,17 @@ a:hover {
     width: 40%;
   }
   .nevigation-btn .right-nevigation {
-    top: 16%;
+    top: -55%;
     right: 3%;
     z-index: 99;
   }
   .nevigation-btn .left-nevigation {
-    top: 16%;
+    top: -55%;
     left: 3%;
     z-index: 99;
+  }
+  .mycard-box .slider-number {
+    right: 30%;
   }
 }
 
@@ -476,6 +551,10 @@ a:hover {
 }
 
 .menu-box {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 100%;
   position: fixed;
   height: 100vh;
@@ -584,6 +663,10 @@ a:hover {
 }
 
 .main {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   overflow: hidden;
   width: 100%;
   height: 100vh;
@@ -701,6 +784,10 @@ a:hover {
 }
 
 .about-box {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 100%;
   height: 40vh;
   display: -webkit-box;
@@ -729,6 +816,11 @@ a:hover {
 
 .services-box {
   margin-top: 100px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
 }
 
 @media screen and (min-width: 992px) {

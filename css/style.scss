@@ -120,6 +120,7 @@
 }
  //navbar menu list
  .menu-box{
+    user-select: none;
     width: 100%;
     position: fixed;
     height: 100vh;
@@ -212,6 +213,7 @@
 // navbar menu list end here
 // navbar end here
 .main{
+    user-select: none;
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -304,6 +306,7 @@
 }
 // about section start here
 .about-box{
+    user-select: none;
     width: 100%;
     height: 40vh;
     display: flex;
@@ -321,6 +324,11 @@
 // service section start here
 .services-box{
     margin-top: 100px;
+    user-select: none;
+    position: relative;
+   
+    
+
 }
 // for large devices
 @media screen and (min-width:992px) {

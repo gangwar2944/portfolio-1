@@ -8,7 +8,6 @@ const loader = document.querySelector('#loading');
 const body = document.querySelector('body');
 const allShadow = document.querySelectorAll('.shadow');
 const allShadow2 = document.querySelectorAll('.shadow2');
-let colorCode = getComputedStyle(document.body);
 const allMenu = document.querySelectorAll('.menu-item');
 const allText = document.querySelectorAll('.text');
 const title = document.querySelector('#title');
@@ -19,15 +18,16 @@ const allSlider = document.querySelectorAll('.mycard');
 const leftSlide = document.querySelector('#left-slider');
 const rightSlide = document.querySelector("#right-slider");
 const allFadeElement = document.querySelectorAll('.fade');
+let sliderNumberBox = document.querySelector('.slider-number');
+let currentSlideNumber = document.querySelector('.current-slide');
+let totalSlideNumber = document.querySelector('.total-slide');
+let colorCode = getComputedStyle(document.body);
 let currentSlide = 0;
-// let animateSlide = 0; //for animationg all slide
 let menuOpen = false;
-
+totalSlideNumber.textContent = allSlider.length;
 
 //============= ALL FUNCTIONS ================
 // under developement function
-
-
 function myalert(){
     setTimeout(()=>{
       alert.style.display = "none";
@@ -98,14 +98,15 @@ function showSlider(current){
 
 // animating all slider
 
-// let intervalid = setInterval(function(){
-//     removeaALLSlide();
-//      if(animateSlide === allSlider.length){
-//         animateSlide = 0;
-//     }
-//     showSlider(animateSlide);
-//     animateSlide++;
-//   },15000);
+setInterval(function(){
+    removeaALLSlide();
+    currentSlide++;
+    if(currentSlide >= allSlider.length){
+        currentSlide = 0;
+    }
+    currentSlideNumber.textContent = currentSlide + 1;
+    showSlider(currentSlide);
+  },20000);
 
 
 // init functions
@@ -116,6 +117,7 @@ function init(){
     landingBtnBox.classList.add('active');
    // allSlider[0].classList.add('active');
    currentSlide = 0;
+   currentSlideNumber.textContent = currentSlide + 1;
      myalert();
      
 }
@@ -187,7 +189,7 @@ rightSlide.addEventListener('click',function(e){
     if(currentSlide >= allSlider.length){
         currentSlide = 0;
     }
-    
+    currentSlideNumber.textContent = currentSlide + 1;
     showSlider(currentSlide);
 });
 
@@ -200,7 +202,7 @@ leftSlide.addEventListener('click',function(e){
         currentSlide = allSlider.length;
     }
     currentSlide--;
-    
+    currentSlideNumber.textContent = currentSlide + 1;
     showSlider(currentSlide);
 });
 addEventListener('scroll',()=>{
@@ -214,21 +216,21 @@ if(distanceFromTop < 50){
         el.classList.add('fade-in');
     });
 }
-if(distanceFromTop > 200){
+if(distanceFromTop > allFadeElement[0].getBoundingClientRect().top - 100){
     allFadeElement[0].classList.remove('fade-in');
     
 }
 // animate about content
-if(distanceFromTop > 430){
+if(distanceFromTop > allFadeElement[1].getBoundingClientRect().top + 100){
     allFadeElement[1].classList.remove('fade-in');
 }
 // animate services heading
-if(distanceFromTop > 650){
+if(distanceFromTop > allFadeElement[2].getBoundingClientRect().top + 100){
     allFadeElement[2].classList.remove('fade-in');
 }
 // animate sevices content
-if(distanceFromTop > 750){
-   
+if(distanceFromTop > allFadeElement[3].getBoundingClientRect().top + 220){
+   allFadeElement[3].classList.remove('fade-in');
     if(currentSlide === 0){
        showSlider(0);
     }
